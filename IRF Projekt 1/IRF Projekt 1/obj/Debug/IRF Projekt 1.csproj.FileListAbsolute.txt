@@ -1,0 +1,11 @@
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\bin\Debug\IRF Projekt 1.exe.config
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\bin\Debug\IRF Projekt 1.exe
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\bin\Debug\IRF Projekt 1.pdb
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.csprojAssemblyReference.cache
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form1.resources
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form2.resources
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Properties.Resources.resources
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.csproj.GenerateResource.cache
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.exe
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.pdb
+C:\Users\aorgovan\source\repos\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form3.resources
