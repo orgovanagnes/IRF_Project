@@ -33,23 +33,12 @@ namespace IRF_Projekt_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-           /* Form3 f3 = new Form3();
+           Form3 f3 = new Form3();
 
             if (f3.ShowDialog() == DialogResult.OK)
             {
-                dolgozo = new Dolgozok();
-                dolgozo.Név = f3.textBox1.Text;
-                dolgozo.Születési_dátum = DateTime.Parse(f3.textBox2.Text);
-                dolgozo.Cím = f3.textBox3.Text;
-                dolgozo.Fizetés = Int32.Parse(f3.textBox4.Text);
-                dolgozo.BeosztásFK = Int32.Parse(f3.textBox5.Text);
-
-                context.Dolgozoks.Add(dolgozo);
-                context.SaveChanges();
-
-                Listázás();
-
-            }*/
+               
+            }
         }
     }
 }
