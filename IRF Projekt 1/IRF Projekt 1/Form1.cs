@@ -25,7 +25,8 @@ namespace IRF_Projekt_1
         
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form4 f4 = new Form4();
+            f4.Show();
         }
     }
 }

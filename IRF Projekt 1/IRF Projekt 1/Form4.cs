@@ -18,13 +18,16 @@ namespace IRF_Projekt_1
         List<AlkoholistaVSZ> AlkoholistaVSZs = new List<AlkoholistaVSZ>();
         List<NemAlkoholistaVSZ> NemAlkoholistaVSZs = new List<NemAlkoholistaVSZ>();
 
+        Random rng = new Random(1234);
         public Form4()
         {
             InitializeComponent();
 
             Személyek = GetSzemélyek(@"C:\Temp\Résztvevők.csv");
-            dataGridView1.DataSource = Személyek;
-            
+            AlkoholistaVSZs = GetAlkoholistaVSZs(@"C:\Temp\Alkoholista.csv");
+            NemAlkoholistaVSZs = GetNemAlkoholistaVSZs(@"C:\Temp\Nem_Alkoholista.csv");
+
+            //dataGridView1.DataSource = Személyek;
         }
 
         public List<Személy> GetSzemélyek(string csvpath)
@@ -46,6 +49,48 @@ namespace IRF_Projekt_1
             }
 
             return Személyek;
+        }
+
+        public List<AlkoholistaVSZ> GetAlkoholistaVSZs(string csvpath)
+        {
+            List<AlkoholistaVSZ> AlkoholistaVSZs = new List<AlkoholistaVSZ>();
+
+            using (StreamReader sr = new StreamReader(csvpath, Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    AlkoholistaVSZs.Add(new AlkoholistaVSZ()
+                    {
+                        Kor = int.Parse(line[0]),
+                        AlkoholistaÉv = int.Parse(line[1]),
+                        Valószínűség = double.Parse(line[2])
+                    });
+                }
+            }
+
+            return AlkoholistaVSZs;
+        }
+
+        public List<NemAlkoholistaVSZ> GetNemAlkoholistaVSZs(string csvpath)
+        {
+            List<NemAlkoholistaVSZ> NemAlkoholistaVSZs = new List<NemAlkoholistaVSZ>();
+
+            using (StreamReader sr = new StreamReader(csvpath, Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    NemAlkoholistaVSZs.Add(new NemAlkoholistaVSZ()
+                    {
+                        Kor = int.Parse(line[1]),
+                        Gender = (Nem)Enum.Parse(typeof(Nem), line[0]),
+                        Valószínűség = double.Parse(line[2])
+                    });
+                }
+            }
+
+            return NemAlkoholistaVSZs;
         }
 
     }
