@@ -27,8 +27,32 @@ namespace IRF_Projekt_1
             AlkoholistaVSZs = GetAlkoholistaVSZs(@"C:\Temp\Alkoholista.csv");
             NemAlkoholistaVSZs = GetNemAlkoholistaVSZs(@"C:\Temp\Nem_Alkoholista.csv");
 
-            //dataGridView1.DataSource = Személyek;
+            // dataGridView1.DataSource = AlkoholistaVSZs;
         }
+
+        private void Szimuláció()
+        {
+            for (int year = 2005; year <= 2024; year++)
+            {
+                
+                for (int i = 0; i < Személyek.Count; i++)
+                {
+                    
+                }
+
+                int férfiakszáma = (from x in Személyek
+                                  where x.Nem == Nem.Male && x.Alkoholista
+                                  select x).Count();
+                int nőkszáma = (from x in Személyek
+                                    where x.Nem == Nem.Female && x.Alkoholista
+                                    select x).Count();
+                Console.WriteLine(
+                    string.Format("Év:{0} Férfiak:{1} Nők:{2}", year, férfiakszáma, nőkszáma));
+
+            }
+
+        }
+
 
         public List<Személy> GetSzemélyek(string csvpath)
         {
@@ -72,7 +96,7 @@ namespace IRF_Projekt_1
             return AlkoholistaVSZs;
         }
 
-        public List<NemAlkoholistaVSZ> GetNemAlkoholistaVSZs(string csvpath)
+        public List<NemAlkoholistaVSZ> GetNemAlkoholistaVSZs(string csvpath)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         {
             List<NemAlkoholistaVSZ> NemAlkoholistaVSZs = new List<NemAlkoholistaVSZ>();
 
