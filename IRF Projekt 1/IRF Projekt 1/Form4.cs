@@ -137,16 +137,26 @@ namespace IRF_Projekt_1
             for (int year = minYear; year < maxYear; year++)
             {
                               
-                int hanyEveVagyokAlkoholista = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
-                int numberOfEmber = (from x in Személyek
-                                     where x.SzületésiÉv == year && x.Nem == Nem.Male && x.AlkoholistaÉv == hanyEveVagyokAlkoholista
+                int hanyEveVagyokAlkoholistaFerfi = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
+                int numberOfFerfi = (from x in Személyek
+                                     where x.SzületésiÉv == year && x.Nem == Nem.Male && x.AlkoholistaÉv == hanyEveVagyokAlkoholistaFerfi
                                      select x).Count();
 
-                using (System.IO.StreamWriter file =
-                    new System.IO.StreamWriter(@"C:\Temp\output.txt", true))
+               /* int hanyEveVagyokAlkoholistaNo = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
+                int numberOfNo = (from x in Személyek
+                                     where x.SzületésiÉv == year && x.Nem == Nem.Female && x.AlkoholistaÉv == hanyEveVagyokAlkoholistaNo
+                                     select x).Count();*/
+
+                //if (numberOfFerfi > 0)
                 {
-                    file.WriteLine(string.Format("Év:{0} // Hány éve alkholista: {1} // Db ember:{2}", year, hanyEveVagyokAlkoholista, numberOfEmber));
-                }
+
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Temp\output.txt", true))
+                    {
+                     file.WriteLine(string.Format("{0}-ban/ben {1} férfi született, aki(k) {2} éve alkoholisták.", year, numberOfFerfi, hanyEveVagyokAlkoholistaFerfi));
+                    }
+
+                }  
+                    
             }
         }
     }

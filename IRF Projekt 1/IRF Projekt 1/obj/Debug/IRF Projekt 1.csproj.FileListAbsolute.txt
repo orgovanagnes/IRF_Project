@@ -15,7 +15,6 @@ C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\bin\D
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.csprojAssemblyReference.cache
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form1.resources
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form2.resources
-C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form3.resources
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Properties.Resources.resources
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.csproj.GenerateResource.cache
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.exe
