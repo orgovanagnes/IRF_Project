@@ -136,47 +136,11 @@ namespace IRF_Projekt_1
 
             for (int year = minYear; year < maxYear; year++)
             {
-                /*
-                    for (int i = 0; i < Személyek.Count; i++)
-                    {
-                        Személy személy = Személyek[i];
-                        if (!személy.Alkoholista) continue;
-
-                        byte kor = (byte)(year - személy.SzületésiÉv);
-
-                        double pnemalkoholista = (from x in NemAlkoholistaVSZs
-                                               where x.Gender == személy.Nem && x.Kor == kor + 1
-                                               select x.Valószínűség).First();
-                        if (rng.NextDouble() <= pnemalkoholista) személy.Alkoholista = false;
-
-
-                        double palkoholista = (from x in AlkoholistaVSZs
-                                               where x.Kor == kor
-                                               select x.Valószínűség).FirstOrDefault();
-
-                        if (rng.NextDouble() <= palkoholista)
-                        {
-                        
-                        }
-
-
-
-                    }
-                    */
-                //            }
-
-                //}
-
-               
+                              
                 int hanyEveVagyokAlkoholista = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
                 int numberOfEmber = (from x in Személyek
                                      where x.SzületésiÉv == year && x.Nem == Nem.Male && x.AlkoholistaÉv == hanyEveVagyokAlkoholista
                                      select x).Count();
-                /*int nbrOfFemales = (from x in Population
-                                    where x.Gender == Gender.Female && x.IsAlive
-                                    select x).Count();*/
-                //Console.WriteLine(
-                //    string.Format("Év:{0} Fiuk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
 
                 using (System.IO.StreamWriter file =
                     new System.IO.StreamWriter(@"C:\Temp\output.txt", true))

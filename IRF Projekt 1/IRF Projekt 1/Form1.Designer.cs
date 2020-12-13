@@ -34,7 +34,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 56);
+            this.button1.Location = new System.Drawing.Point(64, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 134);
             this.button1.TabIndex = 0;
@@ -44,11 +44,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(229, 56);
+            this.button2.Location = new System.Drawing.Point(238, 56);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 134);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Adatok elemzése";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(459, 265);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";

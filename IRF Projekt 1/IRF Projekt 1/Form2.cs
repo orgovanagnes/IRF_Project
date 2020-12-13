@@ -33,12 +33,29 @@ namespace IRF_Projekt_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-           Form3 f3 = new Form3();
+            //CSV fájlba írás 
 
-            if (f3.ShowDialog() == DialogResult.OK)
+            int count_row = dataGridView1.RowCount;
+            int count_cell = dataGridView1.Rows[0].Cells.Count;
+
+            for (int row_index = 0; row_index < count_row - 2; row_index++)
             {
-               
+                for (int cell_index = 0; cell_index < count_cell; cell_index++)
+                {
+                    textBox1.Text = textBox1.Text + dataGridView1.Rows[row_index].Cells[cell_index].Value.ToString() + ";";
+                }
+                textBox1.Text = textBox1.Text + "\r\n";
             }
+
+            System.IO.File.WriteAllText(@"C:\Temp\Résztvevők.csv", textBox1.Text);
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+            textBox1.Multiline = true;
+
         }
     }
 }
