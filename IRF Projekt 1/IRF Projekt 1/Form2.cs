@@ -21,8 +21,12 @@ namespace IRF_Projekt_1
         private void button1_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+
             ds.ReadXml("C:/Temp/Résztvevők.xml");
             dataGridView1.DataSource = ds.Tables[0];
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,8 +58,14 @@ namespace IRF_Projekt_1
         private void Form2_Load(object sender, EventArgs e)
         {
 
-            textBox1.Multiline = true;
+            textBox1.Multiline = true;       
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();                     
         }
     }
 }

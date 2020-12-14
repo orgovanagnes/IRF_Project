@@ -147,7 +147,7 @@ namespace IRF_Projekt_1
                                      where x.SzületésiÉv == year && x.Nem == Nem.Female && x.AlkoholistaÉv == hanyEveVagyokAlkoholistaNo
                                      select x).Count();*/
 
-                //if (numberOfFerfi > 0)
+               
                 {
 
                     using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Temp\output.txt", true))
