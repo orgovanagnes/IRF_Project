@@ -21,11 +21,24 @@ namespace IRF_Projekt_1
         private void button1_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
-
             ds.ReadXml("C:/Temp/Résztvevők.xml");
-            dataGridView1.DataSource = ds.Tables[0];
+            // EREDETI: dataGridView1.DataSource = ds.Tables[0];
 
+            foreach (DataRow item in ds.Tables[0].Rows)
+            {
+                int n = dataGridView1.Rows.Add();
+
+                dataGridView1.Rows[n].Cells[0].Value = item["Születési_Év"].ToString();
+                dataGridView1.Rows[n].Cells[1].Value = item["Nem"].ToString();
+                dataGridView1.Rows[n].Cells[2].Value = item["Alkoholista_Év"].ToString();
+            }
+       
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+      
+            textBox1.Multiline = true;
 
         }
 
@@ -55,17 +68,21 @@ namespace IRF_Projekt_1
 
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-            textBox1.Multiline = true;       
-
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
             Form3 f3 = new Form3();
             f3.Show();                     
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int n = dataGridView1.Rows.Add();
+            dataGridView1.Rows[n].Cells[0].Value = textBox2.Text;
+            dataGridView1.Rows[n].Cells[1].Value = textBox3.Text;
+            dataGridView1.Rows[n].Cells[2].Value = textBox4.Text;
+
         }
     }
 }
