@@ -107,6 +107,7 @@ namespace IRF_Projekt_1
             int maxAlkholistaÉV = 1;
 
             // csak a férfiakat tekintve a szélső értékek (legkisebb / legnagyobb évszám --- hány éves alkholisták - min/max)
+
             for (int i = 0; i < Személyek.Count; i++)
             {
                 Személy személy = Személyek[i];
@@ -136,13 +137,14 @@ namespace IRF_Projekt_1
 
             for (int year = minYear; year < maxYear; year++)
             {
-                              
+             //random szám felhasználása
+                       
                 int hanyEveVagyokAlkoholistaFerfi = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
                 int numberOfFerfi = (from x in Személyek
                                      where x.SzületésiÉv == year && x.Nem == Nem.Male && x.AlkoholistaÉv == hanyEveVagyokAlkoholistaFerfi
                                      select x).Count();
 
-               /* int hanyEveVagyokAlkoholistaNo = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
+             /* int hanyEveVagyokAlkoholistaNo = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
                 int numberOfNo = (from x in Személyek
                                      where x.SzületésiÉv == year && x.Nem == Nem.Female && x.AlkoholistaÉv == hanyEveVagyokAlkoholistaNo
                                      select x).Count();*/
@@ -158,6 +160,24 @@ namespace IRF_Projekt_1
                 }  
                     
             }
+
+            //jövőre hány nő és férfi lesz alkoholista?
+
+            int jovorealkoholista = (from y in AlkoholistaVSZs
+                                          where y.Valószínűség >= 0.5
+                                          select y).Count();
+
+
+            {
+
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Temp\output2.txt", true))
+                {
+                    file.WriteLine(string.Format("Jövőre ennyi alkoholista lesz {0}", jovorealkoholista));
+                }
+
+            }
+
+
         }
     }
 }
