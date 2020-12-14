@@ -20,4 +20,3 @@ C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\D
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.exe
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF Projekt 1.pdb
 C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form4.resources
-C:\Users\aorgovan\Documents\GitHub\IRF_Project\IRF Projekt 1\IRF Projekt 1\obj\Debug\IRF_Projekt_1.Form3.resources

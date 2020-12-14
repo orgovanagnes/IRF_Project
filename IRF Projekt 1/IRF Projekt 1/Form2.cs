@@ -22,8 +22,7 @@ namespace IRF_Projekt_1
         {
             DataSet ds = new DataSet();
             ds.ReadXml("C:/Temp/Résztvevők.xml");
-            // EREDETI: dataGridView1.DataSource = ds.Tables[0];
-
+          
             foreach (DataRow item in ds.Tables[0].Rows)
             {
                 int n = dataGridView1.Rows.Add();
@@ -37,7 +36,9 @@ namespace IRF_Projekt_1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-      
+
+            textBox1.Width = 100;
+            textBox1.Height = 200;
             textBox1.Multiline = true;
 
         }
@@ -68,14 +69,7 @@ namespace IRF_Projekt_1
 
         }
 
-        
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form3 f3 = new Form3();
-            f3.Show();                     
-        }
-
+       
         private void button5_Click(object sender, EventArgs e)
         {
             int n = dataGridView1.Rows.Add();
