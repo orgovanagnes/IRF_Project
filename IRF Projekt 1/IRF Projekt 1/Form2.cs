@@ -14,12 +14,13 @@ namespace IRF_Projekt_1
     {
         public Form2()
         {
-            InitializeComponent();
-            
+            InitializeComponent();         
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //XML beolvasása
+
             DataSet ds = new DataSet();
             ds.ReadXml("C:/Temp/Résztvevők.xml");
           
@@ -35,7 +36,7 @@ namespace IRF_Projekt_1
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {
+        { 
 
             textBox1.Width = 100;
             textBox1.Height = 200;
@@ -45,6 +46,8 @@ namespace IRF_Projekt_1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //sor törlése
+
             int rowIndex = dataGridView1.CurrentCell.RowIndex;
             dataGridView1.Rows.RemoveAt(rowIndex);
         }
@@ -72,10 +75,39 @@ namespace IRF_Projekt_1
        
         private void button5_Click(object sender, EventArgs e)
         {
+            //új adatok hozzáadása
+
             int n = dataGridView1.Rows.Add();
             dataGridView1.Rows[n].Cells[0].Value = textBox2.Text;
             dataGridView1.Rows[n].Cells[1].Value = textBox3.Text;
             dataGridView1.Rows[n].Cells[2].Value = textBox4.Text;
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+           
+            dt.TableName = "Résztvevők";
+            dt.Columns.Add("Születési_Év");
+            dt.Columns.Add("Nem");
+            dt.Columns.Add("Alkoholista_Év");
+            ds.Tables.Add(dt);
+
+
+            foreach (DataGridViewRow r in dataGridView1.Rows)
+            {
+                DataRow row = ds.Tables[0].NewRow();
+                row["Születési_Év"] = r.Cells[0].Value.ToString();
+                row["Nem"] = r.Cells[1].Value.ToString();
+                row["Alkoholista_Év"] = r.Cells[2].Value.ToString();
+                ds.Tables[0].Rows.Add(row);
+            }
+
+            ds.WriteXml("C:\\Temp\\Résztvevőkoutpot.xml");
+            
+
 
         }
     }
