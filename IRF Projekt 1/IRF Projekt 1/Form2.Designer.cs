@@ -85,7 +85,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(361, 153);
+            this.button3.Location = new System.Drawing.Point(457, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 64);
             this.button3.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(456, 28);
+            this.textBox1.Location = new System.Drawing.Point(457, 99);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(70, 20);
             this.textBox1.TabIndex = 4;
@@ -123,6 +123,7 @@
             this.label4.Size = new System.Drawing.Size(163, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "Új résztvevő adatainak rögzítése";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -185,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(453, 12);
+            this.label5.Location = new System.Drawing.Point(454, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(188, 13);
             this.label5.TabIndex = 16;
@@ -193,11 +194,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(372, 333);
+            this.button4.Location = new System.Drawing.Point(361, 153);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(86, 64);
             this.button4.TabIndex = 17;
-            this.button4.Text = "button4";
+            this.button4.Text = "XML fájlba mentés";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -205,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 673);
+            this.ClientSize = new System.Drawing.Size(660, 673);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);

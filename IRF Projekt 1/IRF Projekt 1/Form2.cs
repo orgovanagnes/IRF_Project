@@ -54,7 +54,7 @@ namespace IRF_Projekt_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //CSV fájlba írás 
+            //CSV fájlba írás, ezt a későbbiekben beolvasam és felhasználom
 
             int count_row = dataGridView1.RowCount;
             int count_cell = dataGridView1.Rows[0].Cells.Count;
@@ -86,6 +86,7 @@ namespace IRF_Projekt_1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //XML mentése
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
            
@@ -108,6 +109,11 @@ namespace IRF_Projekt_1
             ds.WriteXml("C:\\Temp\\Résztvevőkoutpot.xml");
             
 
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }
