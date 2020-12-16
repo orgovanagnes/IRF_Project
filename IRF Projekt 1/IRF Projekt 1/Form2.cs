@@ -25,7 +25,7 @@ namespace IRF_Projekt_1
             //XML beolvasása
 
             DataSet ds = new DataSet();
-            ds.ReadXml("C:/Temp/Résztvevők.xml");
+            ds.ReadXml("C:\\Users\\aorgovan\\Documents\\GitHub\\IRF_Project\\Résztvevők.xml");
           
             foreach (DataRow item in ds.Tables[0].Rows)
             {
@@ -71,7 +71,7 @@ namespace IRF_Projekt_1
                 textBox1.Text = textBox1.Text + "\r\n";
             }
 
-            System.IO.File.WriteAllText(@"C:\Temp\Résztvevők.csv", textBox1.Text);
+            System.IO.File.WriteAllText(@"C:\\Users\\aorgovan\\Documents\\GitHub\\IRF_Project\\Résztvevők.csv", textBox1.Text);
 
         }
 
@@ -109,7 +109,7 @@ namespace IRF_Projekt_1
                 ds.Tables[0].Rows.Add(row);
             }
 
-            ds.WriteXml("C:\\Temp\\Résztvevőkoutpot.xml");
+            ds.WriteXml("C:\\Users\\aorgovan\\Documents\\GitHub\\IRF_Project\\Résztvevők.xml");
             
 
 
@@ -136,7 +136,8 @@ namespace IRF_Projekt_1
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {
+        { // adott tulajdonságú sor törlése
+
             int minYear = 99999;
             int count_row = dataGridView1.RowCount;
             int count_cell = dataGridView1.Rows[0].Cells.Count;

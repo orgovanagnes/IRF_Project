@@ -1,51 +1,83 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Személyeks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Személyek Nem="1" Alkoholista_Év ="4">
-		<Születési_Év>1992</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="2">
-		<Születési_Év>1993</Születési_Év>
-	</Személyek>
-	<Személyek Nem="1" Alkoholista_Év ="3">
-		<Születési_Év>1987</Születési_Év>
-	</Személyek>
-	<Személyek Nem="1" Alkoholista_Év ="4">
-		<Születési_Év>1988</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="7">
-		<Születési_Év>1997</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="3">
-		<Születési_Év>1999</Születési_Év>
-	</Személyek>
-	<Személyek Nem="1" Alkoholista_Év ="1">
-		<Születési_Év>1989</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="2">
-		<Születési_Év>1984</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="4">
-		<Születési_Év>1981</Születési_Év>
-	</Személyek>
-	<Személyek Nem="1" Alkoholista_Év ="3">
-		<Születési_Év>1991</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="6">
-		<Születési_Év>1984</Születési_Év>
-	</Személyek>
-	<Személyek Nem="1" Alkoholista_Év ="4">
-		<Születési_Év>1986</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="8">
-		<Születési_Év>1990</Születési_Év>
-	</Személyek>
-	<Személyek Nem="2" Alkoholista_Év ="3">
-		<Születési_Év>1990</Születési_Év>
-	</Személyek>
-	<Személyek Nem="1" Alkoholista_Év ="2">
-		<Születési_Év>1987</Születési_Év>
-	</Személyek>
-	<Személyek Nem="1" Alkoholista_Év ="3">
-		<Születési_Év>1994</Születési_Év>
-	</Személyek>
-</Személyeks>
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Résztvevők>
+    <Születési_Év>1992</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>4</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1993</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>2</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1987</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>3</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1988</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>4</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1997</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>7</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1999</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>3</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1989</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>1</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1984</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>2</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1981</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>4</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1991</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>3</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1984</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>6</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1986</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>4</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1990</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>8</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1990</Születési_Év>
+    <Nem>2</Nem>
+    <Alkoholista_Év>3</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1987</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>2</Alkoholista_Év>
+  </Résztvevők>
+  <Résztvevők>
+    <Születési_Év>1994</Születési_Év>
+    <Nem>1</Nem>
+    <Alkoholista_Év>3</Alkoholista_Év>
+  </Résztvevők>
+</NewDataSet>

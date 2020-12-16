@@ -62,7 +62,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(343, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(343, 403);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -216,11 +216,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(364, 263);
+            this.button6.Location = new System.Drawing.Point(226, 421);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(129, 23);
             this.button6.TabIndex = 25;
-            this.button6.Text = "törlés 2";
+            this.button6.Text = "Legidősebb törlése";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 

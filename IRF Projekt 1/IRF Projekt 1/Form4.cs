@@ -91,9 +91,9 @@ namespace IRF_Projekt_1
         {
             InitializeComponent();
 
-            Személyek = GetSzemélyek(@"C:\Temp\Résztvevők.csv");
-            AlkoholistaVSZs = GetAlkoholistaVSZs(@"C:\Temp\Alkoholista.csv");
-            NemAlkoholistaVSZs = GetNemAlkoholistaVSZs(@"C:\Temp\Nem_Alkoholista.csv");
+            Személyek = GetSzemélyek(@"C:\\Users\\aorgovan\\Documents\\GitHub\\IRF_Project\\Résztvevők.csv");
+            AlkoholistaVSZs = GetAlkoholistaVSZs(@"C:\\Users\\aorgovan\\Documents\\GitHub\\IRF_Project\\Alkoholista.csv");
+            NemAlkoholistaVSZs = GetNemAlkoholistaVSZs(@"C:\\Users\\aorgovan\\Documents\\GitHub\\IRF_Project\\Nem_Alkoholista.csv");
 
             // dataGridView1.DataSource = AlkoholistaVSZs;
         }
@@ -149,7 +149,7 @@ namespace IRF_Projekt_1
                
                 {
 
-                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Temp\output.txt", true))
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\\Users\\aorgovan\\Documents\\GitHub\\IRF_Project\\output.txt", true))
                     {
                      file.WriteLine(string.Format("{0}-ban/ben {1} férfi született, aki(k) {2} éve alkoholisták.", year, numberOfFerfi, hanyEveVagyokAlkoholistaFerfi));
                     }
