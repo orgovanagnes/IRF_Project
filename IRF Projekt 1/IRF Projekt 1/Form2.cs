@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -79,7 +80,7 @@ namespace IRF_Projekt_1
 
             int n = dataGridView1.Rows.Add();
             dataGridView1.Rows[n].Cells[0].Value = textBox2.Text;
-            dataGridView1.Rows[n].Cells[1].Value = textBox3.Text;
+            dataGridView1.Rows[n].Cells[1].Value = textBox5.Text;
             dataGridView1.Rows[n].Cells[2].Value = textBox4.Text;
 
         }
@@ -112,9 +113,19 @@ namespace IRF_Projekt_1
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void textBox5_Validating(object sender, CancelEventArgs e)
         {
+            Regex r = new Regex(@"^[1-2]{1}$");
 
+            if (!r.IsMatch(textBox5.Text))
+            {
+                e.Cancel = true;
+                textBox5.BackColor = Color.Fuchsia;
+            }
+            else
+            {
+                textBox5.BackColor = Color.LightGreen;
+            }
         }
     }
 }
