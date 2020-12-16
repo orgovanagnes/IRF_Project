@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace IRF_Projekt_1
@@ -68,8 +69,8 @@ namespace IRF_Projekt_1
                     var line = sr.ReadLine().Split(';');
                     NemAlkoholistaVSZs.Add(new NemAlkoholistaVSZ()
                     {
-                        Kor = int.Parse(line[1]),
-                        Gender = (Nem)Enum.Parse(typeof(Nem), line[0]),
+                        Kor = int.Parse(line[0]),
+                        Gender = (Nem)Enum.Parse(typeof(Nem), line[1]),
                         Valószínűség = double.Parse(line[2])
                     });
                 }
@@ -141,14 +142,8 @@ namespace IRF_Projekt_1
                        
                 int hanyEveVagyokAlkoholistaFerfi = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
                 int numberOfFerfi = (from x in Személyek
-                                     where x.SzületésiÉv == year && x.Nem == Nem.Male && x.AlkoholistaÉv == hanyEveVagyokAlkoholistaFerfi
+                                     where x.SzületésiÉv == year && x.Nem == Nem.Male && x.AlkoholistaÉv >= hanyEveVagyokAlkoholistaFerfi
                                      select x).Count();
-
-             /* int hanyEveVagyokAlkoholistaNo = rng.Next(minAlkoholistaÉv, maxAlkholistaÉV);
-                int numberOfNo = (from x in Személyek
-                                     where x.SzületésiÉv == year && x.Nem == Nem.Female && x.AlkoholistaÉv == hanyEveVagyokAlkoholistaNo
-                                     select x).Count();*/
-
                
                 {
 
@@ -160,24 +155,25 @@ namespace IRF_Projekt_1
                 }  
                     
             }
+        }
 
-            //jövőre hány nő és férfi lesz alkoholista?
+        private void button2_Click(object sender, EventArgs e)
+        { //visszaesők száma
+
+            int jovorevisszaesok = (from z in NemAlkoholistaVSZs
+                                    where z.Valószínűség >= 0.05
+                                    select z).Count();
+
+         //Hányan maradnak alkoholisták?
 
             int jovorealkoholista = (from y in AlkoholistaVSZs
-                                          where y.Valószínűség >= 0.5
-                                          select y).Count();
+                                     where y.Valószínűség >= 0.5
+                                     select y).Count();
+
+            int mindenki = jovorealkoholista + jovorevisszaesok;
 
 
-            {
-
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Temp\output2.txt", true))
-                {
-                    file.WriteLine(string.Format("Jövőre ennyi alkoholista lesz {0}", jovorealkoholista));
-                }
-
-            }
-
-
+            System.Windows.Forms.MessageBox.Show("Jövőre a visszaesők és nem kigyógyultak száma: " + mindenki + " személy", "Előrejelzés", MessageBoxButtons.OK);
         }
     }
 }
