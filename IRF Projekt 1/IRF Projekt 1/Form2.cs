@@ -8,6 +8,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Windows;
 
 namespace IRF_Projekt_1
 {
@@ -130,6 +132,33 @@ namespace IRF_Projekt_1
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int minYear = 99999;
+            int count_row = dataGridView1.RowCount;
+            int count_cell = dataGridView1.Rows[0].Cells.Count;
+
+
+            for (int row_index = 1; row_index < count_row - 2; row_index++)
+            {
+                int currentYear = int.Parse(dataGridView1.Rows[row_index].Cells[0].Value.ToString());
+                if (currentYear < minYear)
+                {
+                    minYear = currentYear;
+                }
+            }
+
+            for (int row_index = 1; row_index < count_row - 2; row_index++)
+            {
+                int currentYear = int.Parse(dataGridView1.Rows[row_index].Cells[0].Value.ToString());
+                if (currentYear == minYear)
+                {
+                    dataGridView1.Rows.RemoveAt(row_index);
+                }
+            }
 
         }
     }
