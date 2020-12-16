@@ -15,6 +15,11 @@ namespace IRF_Projekt_1
 {
     public partial class Form4 : Form
     {
+
+        List<Személy> Személyek = new List<Személy>();
+        List<AlkoholistaVSZ> AlkoholistaVSZs = new List<AlkoholistaVSZ>();
+        List<NemAlkoholistaVSZ> NemAlkoholistaVSZs = new List<NemAlkoholistaVSZ>();
+
         public List<Személy> GetSzemélyek(string csvpath)
         {
             List<Személy> Személyek = new List<Személy>();
@@ -79,9 +84,6 @@ namespace IRF_Projekt_1
             return NemAlkoholistaVSZs;
         }
 
-        List<Személy> Személyek = new List<Személy>();
-        List<AlkoholistaVSZ> AlkoholistaVSZs = new List<AlkoholistaVSZ>();
-        List<NemAlkoholistaVSZ> NemAlkoholistaVSZs = new List<NemAlkoholistaVSZ>();
 
 
 
@@ -174,6 +176,7 @@ namespace IRF_Projekt_1
 
 
             System.Windows.Forms.MessageBox.Show("Jövőre a visszaesők és nem kigyógyultak száma: " + mindenki + " személy", "Előrejelzés", MessageBoxButtons.OK);
+            // MessageBox.Show(string.Format("Jövőre a visszaesők és nem kigyógyultak száma: {0}", mindenki));
         }
     }
 }

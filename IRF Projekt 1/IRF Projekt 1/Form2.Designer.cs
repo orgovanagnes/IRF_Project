@@ -111,7 +111,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(361, 242);
+            this.textBox1.Location = new System.Drawing.Point(364, 236);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(70, 20);
             this.textBox1.TabIndex = 4;
@@ -192,6 +192,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 22;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.Validating += new System.ComponentModel.CancelEventHandler(this.textBox5_Validating);
             // 
             // label7

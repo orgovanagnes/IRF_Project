@@ -120,12 +120,17 @@ namespace IRF_Projekt_1
             if (!r.IsMatch(textBox5.Text))
             {
                 e.Cancel = true;
-                textBox5.BackColor = Color.Fuchsia;
+                textBox5.BackColor = Color.Red;
             }
             else
             {
                 textBox5.BackColor = Color.LightGreen;
             }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
